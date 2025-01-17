@@ -1,0 +1,248 @@
+html {
+    font-size: 62.5%; /* Escala para que 1rem = 10px */
+}
+
+body {
+    background-color: #167560;
+}
+/* Estilo para la barra de menú */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+    position: relative; /* Necesario para el submenú */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* Estilos para el submenú */
+nav ul ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Para que se posicione sobre otros elementos */
+    left: 0; /* Alinea el submenú con el padre */
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    background-color: #333; /* Color de fondo del submenú */
+    padding: 10rem 0; /* Espaciado del submenú */
+    z-index: 1000; /* Asegura que el submenú esté sobre otros elementos */
+}
+
+/* Muestra el submenú al estar activo */
+nav ul li.active > ul {
+    display: block; /* Muestra el submenú */
+}
+
+/* Estilo de los elementos del submenú */
+nav ul ul li {
+    margin: 0; /* Sin margen para los elementos del submenú */
+}
+
+nav ul ul li a {
+    padding: 1rem 2rem; /* Espaciado para los elementos del submenú */
+    display: block; /* Hace que el enlace ocupe todo el espacio */
+    color: white; /* Color del texto en el submenú */
+}
+
+/* Efecto hover para el submenú */
+nav ul ul li a:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+.search-box {
+    margin-right: 2rem; /* Separación del borde */
+}
+
+.search-box input[type="text"] {
+    width: 20rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.search-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+.search-button:hover {
+    background-color: #777;
+}
+
+/* Para asegurarte de que el contenido no quede cubierto por el nav */
+section {
+    min-height: 30vh;
+    padding-top: 4rem; /* Ajuste para que el contenido no quede oculto bajo el nav */
+}
+/*****************/
+/*    BANER      */
+/*****************/
+.ajolote-main {
+    width: 100%;
+    height: 50vh; /* Altura del banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Asegúrate de que la imagen no se desborde */
+}
+
+.ajolote-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y cubre el área del banner */
+    position: absolute; /* Para cubrir el contenedor */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Asegúrate de que la imagen esté detrás de cualquier texto */
+}
+
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .search-box input[type="text"] {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .search-box input[type="text"] {
+        width: 10rem;
+    }
+
+    section {
+        padding-top: 7rem; /* Ajuste para móviles */
+    }
+}
+/* Etiquetas html */
+img {
+    display: inline-flex;
+    width: 100%;
+    height: auto; /* Mantiene la proporción de las imágenes */
+    position: relative;
+}
+
+li {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 1rem;
+    color: #8bd20f;
+}
+h2{
+    font-size: 3.2rem;
+}
+.container {
+    max-width: 90rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+}
+
+h1 {
+    text-align: center;
+    color: #12604f;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.objective, .competencies, .modules {
+    margin-bottom: 2rem;
+}
+
+.objective p {
+    line-height: 1.6;
+}
+
+.competencies ul {
+    list-style: disc;
+    padding-left: 2rem;
+}
+.competencies ul li {
+    margin:0.5rem;
+}
+.modules table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modules th, .modules td {
+    border: 0.1rem solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.modules th {
+    background-color: #12604f;
+    color: #ffffff;
+}
+
+.modules tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.modules tr:hover {
+    background-color: #eaeaea;
+}
+/*etiqutas de la tabla*/
+
+tr{
+    font-size: 2rem;
+}

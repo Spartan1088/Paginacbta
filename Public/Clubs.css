@@ -1,0 +1,272 @@
+/*Cuerpo del html*/
+html{
+    font-size: 62.5%;
+    }
+    body{
+        background-color: #167560;
+    }
+    .tex-container{
+        font-size: 1rem;
+    }
+    .container-main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    /* Etiquetas html*/
+img{
+    display: inline-flex;
+    width: 100%;
+    min-height: 50%;
+    max-height: 50%;
+    position: relative;
+}
+li{
+font-size: 2rem;
+}
+p{
+    font-size: 2rem;
+    margin: 1rem;
+}
+h1{
+    font-size: 3rem;
+    margin: 1rem;
+}
+h1, h2, h3 {
+    margin-bottom: 1.5rem; /* Espacio debajo de los encabezados */
+}
+
+div + h1{
+    font-size: larger;
+    margin: 2rem 2rem 1rem 3rem ;    
+    color: blueviolet;
+}
+h2{
+    font-size: 3rem;
+    margin: 1rem;
+}
+h3{
+    font-size: 2rem;
+    margin: 1rem;
+}
+/* Estilo para la barra de menú */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.search-box {
+    margin-right: 20px; /* Separación del borde */
+}
+
+.search-box input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-button:hover {
+    background-color: #777;
+}
+
+/* Para asegurarte de que el contenido no quede cubierto por el nav */
+section {
+    min-height: 8vh;
+    padding-top: 0.5rem; /* Aumenta este valor para que el contenido no quede oculto bajo el nav */
+}
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--primary-color);
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--dark-color);
+}
+
+.feature-content p {
+	color: #777;
+	font-weight: 500;
+}
+
+/* sindebar*/
+
+.sidebar{
+    height:100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left:0 ;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+/* ********************************** */
+/*           Responsividad            */
+/* ********************************** */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .search-box input[type="text"] {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .search-box input[type="text"] {
+        width: 100px;
+    }
+
+    section {
+        padding-top: 70px; /* Ajuste para móviles */
+    }
+}
+
+/*classes de los componentes*/
+.f1{
+    min-width: 10rem;
+    max-width: 30rem;
+    height: 50rem;
+    margin: 2rem;
+    justify-content: center;
+    justify-content: center;
+    text-align: center; 
+
+}  
+/*busqueda*/
+
+/* Agregar estilos a la barra de búsqueda */
+.search-box {
+    display: flex; /* Para alinear el input y el botón */
+    align-items: center; /* Centrar verticalmente */
+    margin-left: auto; /* Empujar la barra de búsqueda a la derecha */
+    margin-right: 20px; /* Espacio del borde */
+}
+
+.search-box input[type="text"] {
+    width: 200px; /* Ajusta según sea necesario */
+    padding: 8px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.search-button {
+    padding: 8px 15px; /* Espaciado del botón */
+    background-color: #555; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Manita al pasar el mouse */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-left: 5px; /* Espacio entre el input y el botón */
+}
+
+.search-button:hover {
+    background-color: #777; /* Color al pasar el mouse */
+}
+
+/*mascota*/
+.club-description {
+    display: flex; /* Usar flexbox para alinear la imagen y el texto */
+    align-items: flex-start; /* Alinear la imagen y el texto en la parte superior */
+
+}
+
+.club-image {
+    width: 30rem; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    margin-top: 10rem;
+}
+
+.text-content {
+    max-width: 600px; /* Limitar el ancho del texto si es necesario */
+}
+.club-image img{
+    width: 100%;
+    height: 75%;
+}

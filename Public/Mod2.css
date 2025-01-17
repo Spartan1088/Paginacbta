@@ -1,0 +1,389 @@
+:root {
+    --primary-color: #1a1972;
+    --background-color: #07003d;
+    --dark-color: #46048d;
+    --highlight-color: #108a03;
+    --text-color: rgb(12, 12, 12);
+}
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.tex-container {
+    font-size: 1rem;
+}
+
+.container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 2rem;
+    margin: 1rem;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 1rem;
+    color: var(--highlight-color);
+}
+
+.ficha h2 {
+    color: var(--highlight-color);
+    font-size: 3rem;
+}
+
+.ficha p {
+    font-size: 6rem;
+}
+
+.container-mainc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-width: 20rem;
+    max-height: 20rem;
+    margin-bottom: 1rem;
+}
+
+.nomescuela {
+    min-width: 30%;
+    max-width: 70%;
+    min-height: 10rem;
+    max-height: 35rem;
+    margin: 1.2rem;
+}
+
+.descripcion, .informacion {
+    width: 45%;
+    margin: 1rem;
+}
+
+.requisitos {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.requisitos-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.requisitos-contenido > div {
+    width: 50%;
+    text-align: left;
+}
+
+.requisitos h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.requisitos p {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .requisitos-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .requisitos-contenido > div {
+        width: 100%;
+    }
+}
+
+.invitacion, .destacado {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+img {
+    display: inline-flex;
+    width: 100%;
+    height: 75%;
+    position: relative;
+}
+
+li {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 1rem;
+    color: var(--highlight-color);
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; background-color: #333; /* Color de fondo oscuro específico para la barra */
+    color: white;
+    padding: 1rem 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333; 
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+nav ul li.active > ul {
+    display: block;
+}
+
+nav ul ul li {
+    margin: 0;
+}
+
+nav ul ul li a {
+    padding: 1rem 2rem;
+    display: block;
+    color: white; 
+}
+
+nav ul ul li a:hover {
+    background-color: #555;
+}
+
+.search-box {
+    margin-right: 2rem;
+}
+
+.search-box input[type="text"] {
+    width: 20rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.search-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #555;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+.search-button:hover {
+    background-color: #777;
+}
+
+section {
+    min-height: 3vh;
+    padding-top: 4rem;
+}
+
+.ajolote-main {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ajolote-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .search-box input[type="text"] {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .search-box input[type="text"] {
+        width: 10rem;
+    }
+
+    section {
+        padding-top: 7rem;
+    }
+}
+
+.club-description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.club-image {
+    width: 30rem;
+    height: auto;
+    margin-right: 2rem;
+    margin-top: 5rem;
+}
+
+.text-content {
+    max-width: 60rem;
+}
+
+.f1 {
+    min-width: 10rem;
+    min-height: 15rem;
+    max-width: 30rem;
+    max-height: 35rem;
+    margin: 2rem;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.carreras {
+    width: 35rem;
+    height: 35rem;
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.carreras h2 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #ff0000;
+    z-index: 2;
+}
+
+.carreras img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0.4rem);
+    transition: filter 0.3s;
+    z-index: 1;
+}
+
+.carreras:hover img {
+    filter: blur(0);
+}
+
+.carreras p {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.carreras:hover .overlay {
+    opacity: 1;
+}
+
+.derechos {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--highlight-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-derechos {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.texto-derechosh {
+    color: var(--text-color);
+    font-size: 2rem;
+    text-align: center;
+}

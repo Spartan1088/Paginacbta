@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Public/Mod2.css">
+    <script src="Java/Mod.js"></script>
+    <title>Setam</title>
+    <style>
+        /* Estilos adicionales para imagen */
+        .image-placeholder img {
+            width: 100%; /* Hace que la imagen sea responsiva y ocupe el 100% del contenedor */
+            max-width: 800px; /* Limita el tamaño máximo de la imagen */
+            height: auto; /* Mantiene la relación de aspecto */
+            display: block; /* Asegura que la imagen no tenga márgenes innecesarios */
+            margin: 0 auto; /* Centra la imagen */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="redireccionar('Index.html')">Inicio</a></li>
+            <li><a href="#" onclick="redireccionar('Carreras.html')">Oferta Educativa</a></li>
+            <li><a href="#" onclick="redireccionar('Clubs.html')">Clubs</a></li>
+            <li><a href="#" onclick="redireccionar('Instalaciones.html')">Instalaciones</a></li>
+            <li><a href="#" onclick="redireccionar('Monumentos.html')">Monumentos</a></li>
+            <li><a href="#" onclick="redireccionar('OfertaEducativa.html')">Nuevo Ingreso</a></li>
+            <li><a href="#" onclick="redireccionar('Guardianes.html')">Proyecto</a></li>
+            <li onclick="toggleSubmenu(event)">
+                <a href="#">Redes Sociales</a>
+                <ul>
+                    <li><a href="#" onclick="redes('https://www.facebook.com/micbta134')">Facebook</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="intro">
+            <h1>SAETAM</h1>
+            <h2>Sistema Estatal de Telebachilleratos de México</h2>
+            <p>El Sistema Estatal de Telebachilleratos (SAETAM) es una modalidad educativa en México que ofrece opciones de Bachillerato en comunidades rurales o con menor acceso a servicios educativos. Su objetivo es brindar educación de calidad a estudiantes que no pueden asistir a escuelas tradicionales debido a la lejanía de las instituciones educativas o a la falta de recursos.</p>
+            
+            <p>SETAM es un sistema que se adapta a las necesidades de cada comunidad, con un enfoque inclusivo que tiene en cuenta las particularidades sociales, culturales y económicas de cada región. A través de esta modalidad, los estudiantes tienen la oportunidad de acceder a una formación académica que les permita continuar con sus estudios superiores o integrarse al ámbito laboral.</p>
+
+            <!-- Espacio para la imagen representativa de SETAM -->
+            <div class="image-placeholder">
+                <img src="IMG/Saetam.jpg" alt="Imagen representativa SETAM">
+            </div>
+        </section>
+
+        <!-- Características de SETAM -->
+        <section class="features">
+            <h1>Características de SAETAM</h1>
+
+            <div class="feature">
+                <h2>Modalidad semiescolarizada</h2>
+                <ul>
+                    <li>Combina clases presenciales con actividades a distancia</li>
+                    <li>Los alumnos asisten algunos días a la semana para recibir asesorías y clases teóricas.</li>
+                    <li>Las actividades a distancia incluyen el estudio independiente y el uso de plataformas digitales.</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h2>Enfoque práctico</h2>
+                <ul>
+                    <li>Se prioriza el aprendizaje autónomo, estimulando la autoorganización y la disciplina.</li>
+                    <li>Los estudiantes desarrollan habilidades prácticas que les permiten insertarse en el ámbito laboral o continuar con sus estudios superiores.</li>
+                    <li>El enfoque práctico es esencial para resolver problemas de la vida diaria y de su comunidad.</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h2>Infraestructura básica</h2>
+                <ul>
+                    <li>En muchos casos, las aulas se establecen en espacios comunitarios como centros culturales o casas de la cultura.</li>
+                    <li>Los recursos educativos se adaptan a las necesidades y posibilidades de cada comunidad.</li>
+                    <li>Las tecnologías de la información son una herramienta clave, con el uso de plataformas digitales y materiales impresos para facilitar el aprendizaje.</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h2>Apoyo a las comunidades</h2>
+                <ul>
+                    <li>SETAM trabaja estrechamente con las comunidades locales para fomentar el desarrollo social, cultural y económico.</li>
+                    <li>Las actividades extraescolares como talleres, cursos y conferencias también son parte fundamental del modelo educativo.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
